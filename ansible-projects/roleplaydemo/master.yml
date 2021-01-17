@@ -1,0 +1,8 @@
+#to run the role projectfs 
+
+- hosts: myservers
+  become: yes
+  roles:
+    - projectfs
+	
+...
