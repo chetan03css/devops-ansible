@@ -1,0 +1,39 @@
+
+--- 
+# A list of tasty fruits
+		
+fruits: 
+  - Apple
+  - Mango
+  - Grapes
+  - Guava
+...
+
+#A dictionary is represented in a simple key: value form 
+#(the colon must be followed by a space)
+
+#--- 
+# An employee record
+Employee1: 
+  name: CHETAN
+  job: DevOps_Engineer
+    skill: Professional
+	platform: AWS
+	hobbies: 
+	  - singing
+	  - writing books
+	  - reading books 
+	  - coding
+	  
+Employee2: 
+  name: CHETAN
+  job: DevOps_Engineer
+    skill: Professional
+	platform: AWS
+	hobbies: 
+	  - singing
+	  - writing books
+	  - reading books 
+	  - coding	
+#...
+	
