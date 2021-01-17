@@ -1,0 +1,31 @@
+
+- name: create folders structure for java
+  command: mkdir -p /home/ansible/Projects/Java/com/proj1/src/
+  
+- name: create FS for python scripts
+  command: mkdir -p /home/ansible/Projects/Scripts/com/proj1/python/
+  
+- name: create FS for data set
+  command: mkdir -p /home/ansible/Projects/Data/
+
+- name: install tree package
+  yum: 
+    name: tree 
+	state: installed
+
+- name: create java file
+  file:
+    path: '{{javafileMain}}'
+    state: touch
+
+- name: create python scripts
+  file:
+    path: '{{pythonfile}}'
+    state: touch
+    mode: '777'
+
+- name: create data file
+  file:
+    path: /home/ansible/Projects/Data/emp_data.json
+    state: touch
+      
