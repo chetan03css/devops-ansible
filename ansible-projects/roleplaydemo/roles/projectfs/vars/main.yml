@@ -1,0 +1,5 @@
+#variables section for projectfs
+
+javafileMain: /home/ansible/Projects/Java/com/proj1/src/Main.java
+pythonfile: /home/ansible/Projects/Scripts/com/proj1/python/auto.py
+
