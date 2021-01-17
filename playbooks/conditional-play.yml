@@ -1,0 +1,10 @@
+--- # When in playbook
+- hosts: myservers
+  become: yes
+  tasks:
+    - name: Install apache for debian
+      command: apt-get -y install apache2
+      when: ansible_os_family == "Debian"
+    - name: Install apache for redhat
+      command: yum install -y httpd
+      when: ansible_os_family == "RedHat"       
