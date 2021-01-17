@@ -1,0 +1,22 @@
+--- #handlerTest playbook
+- hosts: myservers
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install HTTPD server on centos 7
+      action: yum name=httpd state=installed
+      notify: start_httpd   #is called only if the action is ran & successful
+	- name: Install mysqld server on centos 7
+      action: yum name=mysqld state=installed
+      notify: start_mysqld   #is called only if the action is ran & successful
+	- name: Install apache2 server on debian
+      action: yum name=apache2 state=installed
+      notify: start_apache2
+  handlers:
+    - name: start_httpd   #has to match the notify name. Otherwise throws error
+      action: service name=httpd state=started
+	- name: start_mysqld   #has to match the notify name. Otherwise throws error
+      action: service name=mysqld state=started
+	- name: start_apache2   #has to match the notify name. Otherwise throws error
+      action: service name=start_apache2 state=started
+...
