@@ -1,7 +1,9 @@
 ---
 #HTTPD Yaml Playbook
-- hosts: myservers
-  #become: yes
+- hosts: demo      
+  user: ansible
+  become: yes              
+  connection: ssh
   tasks: 
     - name: Install httpd on amzn linux
       action: yum pkg=httpd state=installed
