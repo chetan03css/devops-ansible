@@ -1,0 +1,13 @@
+# Loop Playbook
+- hosts: myservers
+  become: yes
+  tasks:
+    - name: add a list of users
+      user: name='{{item}}' state=present
+      with_items: 
+        - ajay
+        - harshita
+        - shiva
+	      - ganesh
+	      - parvati
+...
