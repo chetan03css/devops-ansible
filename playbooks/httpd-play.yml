@@ -1,0 +1,8 @@
+---
+#HTTPD Yaml Playbook
+- hosts: myservers
+  #become: yes
+  tasks: 
+    - name: Install httpd on amzn linux
+      action: yum pkg=httpd state=installed
+...
